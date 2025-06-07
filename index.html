@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rive Animation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #000;
+    }
+    canvas {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+  <script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
+</head>
+<body>
+  <canvas id="riveCanvas"></canvas>
+  <script>
+    new rive.Rive({
+      src: "wifi.riv",
+      canvas: document.getElementById("riveCanvas"),
+      autoplay: true,
+      fit: rive.Fit.CONTAIN,
+    });
+  </script>
+</body>
+</html>
